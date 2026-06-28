@@ -8,7 +8,7 @@
 
 import { NextRequest, NextResponse } from "next/server";
 import { registerPatient }           from "@/services/patientService";
-import { successResponse, errorResponse } from "@/utils/apiResponse";
+import { successResponse, errorResponse, toApiFieldErrors } from "@/utils/apiResponse";
 import { IPatient, PatientRegistrationInput } from "@/types/patient";
 
 interface PatientRegistrationResponseData {
@@ -22,12 +22,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     const result = await registerPatient(body);
 
     if (!result.success) {
-      const fieldErrors = result.fieldErrors
-        ? Object.fromEntries(
-            Object.entries(result.fieldErrors).map(([k, v]) => [k, Array.isArray(v) ? v : [v as string]])
-          ) as Record<string, string[]>
-        : undefined;
-
+      const fieldErrors = toApiFieldErrors(result.fieldErrors);
       return errorResponse(result.message, 400, fieldErrors);
     }
 

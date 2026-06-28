@@ -1,0 +1,866 @@
+{
+  "results": [
+    {
+      "file": "app\\api\\patients\\route.ts",
+      "function": "POST",
+      "cyclomatic": 2,
+      "halsteadVolume": 292.3,
+      "halsteadDifficulty": 8.53,
+      "halsteadEffort": 2491.84
+    },
+    {
+      "file": "app\\api\\patients\\[patientId]\\route.ts",
+      "function": "GET",
+      "cyclomatic": 2,
+      "halsteadVolume": 235.56,
+      "halsteadDifficulty": 8.41,
+      "halsteadEffort": 1981.48
+    },
+    {
+      "file": "app\\api\\patients\\[patientId]\\route.ts",
+      "function": "PUT",
+      "cyclomatic": 2,
+      "halsteadVolume": 382.57,
+      "halsteadDifficulty": 9.75,
+      "halsteadEffort": 3730.1
+    },
+    {
+      "file": "app\\api\\patients\\[patientId]\\route.ts",
+      "function": "DELETE",
+      "cyclomatic": 2,
+      "halsteadVolume": 279.69,
+      "halsteadDifficulty": 10,
+      "halsteadEffort": 2796.93
+    },
+    {
+      "file": "app\\api\\patients\\search\\route.ts",
+      "function": "GET",
+      "cyclomatic": 1,
+      "halsteadVolume": 209.22,
+      "halsteadDifficulty": 6,
+      "halsteadEffort": 1255.29
+    },
+    {
+      "file": "app\\api\\auth\\logout\\route.ts",
+      "function": "POST",
+      "cyclomatic": 1,
+      "halsteadVolume": 196.28,
+      "halsteadDifficulty": 4.36,
+      "halsteadEffort": 856.48
+    },
+    {
+      "file": "app\\api\\auth\\login\\route.ts",
+      "function": "POST",
+      "cyclomatic": 2,
+      "halsteadVolume": 401.13,
+      "halsteadDifficulty": 9.1,
+      "halsteadEffort": 3648.72
+    },
+    {
+      "file": "app\\page.tsx",
+      "function": "RootPage",
+      "cyclomatic": 1,
+      "halsteadVolume": 4.75,
+      "halsteadDifficulty": 0.5,
+      "halsteadEffort": 2.38
+    },
+    {
+      "file": "app\\layout.tsx",
+      "function": "RootLayout",
+      "cyclomatic": 1,
+      "halsteadVolume": 112,
+      "halsteadDifficulty": 4.8,
+      "halsteadEffort": 537.6
+    },
+    {
+      "file": "app\\dashboard\\page.tsx",
+      "function": "getRoleGreeting",
+      "cyclomatic": 1,
+      "halsteadVolume": 15.51,
+      "halsteadDifficulty": 1.5,
+      "halsteadEffort": 23.27
+    },
+    {
+      "file": "app\\dashboard\\page.tsx",
+      "function": "getQuickLinks",
+      "cyclomatic": 1,
+      "halsteadVolume": 19.65,
+      "halsteadDifficulty": 2,
+      "halsteadEffort": 39.3
+    },
+    {
+      "file": "app\\dashboard\\page.tsx",
+      "function": "<anon method-1>",
+      "cyclomatic": 2,
+      "halsteadVolume": 49.83,
+      "halsteadDifficulty": 2.67,
+      "halsteadEffort": 132.88
+    },
+    {
+      "file": "app\\dashboard\\page.tsx",
+      "function": "DashboardPage",
+      "cyclomatic": 2,
+      "halsteadVolume": 2279.74,
+      "halsteadDifficulty": 15.22,
+      "halsteadEffort": 34696.53
+    },
+    {
+      "file": "app\\dashboard\\page.tsx",
+      "function": "<anon method-2>",
+      "cyclomatic": 1,
+      "halsteadVolume": 329.03,
+      "halsteadDifficulty": 7.18,
+      "halsteadEffort": 2363.83
+    },
+    {
+      "file": "app\\dashboard\\page.tsx",
+      "function": "<anon method-3>",
+      "cyclomatic": 1,
+      "halsteadVolume": 727.65,
+      "halsteadDifficulty": 6.56,
+      "halsteadEffort": 4775.21
+    },
+    {
+      "file": "app\\dashboard\\page.tsx",
+      "function": "<anon method-4>",
+      "cyclomatic": 1,
+      "halsteadVolume": 98.1,
+      "halsteadDifficulty": 3.82,
+      "halsteadEffort": 374.56
+    },
+    {
+      "file": "app\\dashboard\\layout.tsx",
+      "function": "getRoleLabel",
+      "cyclomatic": 1,
+      "halsteadVolume": 13.93,
+      "halsteadDifficulty": 2.25,
+      "halsteadEffort": 31.35
+    },
+    {
+      "file": "app\\dashboard\\layout.tsx",
+      "function": "isNavItemVisible",
+      "cyclomatic": 2,
+      "halsteadVolume": 48.43,
+      "halsteadDifficulty": 2.92,
+      "halsteadEffort": 141.26
+    },
+    {
+      "file": "app\\dashboard\\layout.tsx",
+      "function": "DashboardLayout",
+      "cyclomatic": 3,
+      "halsteadVolume": 2641.5,
+      "halsteadDifficulty": 17.89,
+      "halsteadEffort": 47269.79
+    },
+    {
+      "file": "app\\dashboard\\layout.tsx",
+      "function": "<anon method-1>",
+      "cyclomatic": 1,
+      "halsteadVolume": 15.51,
+      "halsteadDifficulty": 1,
+      "halsteadEffort": 15.51
+    },
+    {
+      "file": "app\\dashboard\\layout.tsx",
+      "function": "<anon method-2>",
+      "cyclomatic": 1,
+      "halsteadVolume": 460.75,
+      "halsteadDifficulty": 5.15,
+      "halsteadEffort": 2371.51
+    },
+    {
+      "file": "app\\dashboard\\patients\\page.tsx",
+      "function": "PatientSearchPage",
+      "cyclomatic": 6,
+      "halsteadVolume": 2606.97,
+      "halsteadDifficulty": 21.23,
+      "halsteadEffort": 55357.79
+    },
+    {
+      "file": "app\\dashboard\\patients\\page.tsx",
+      "function": "handleSearch",
+      "cyclomatic": 2,
+      "halsteadVolume": 338.53,
+      "halsteadDifficulty": 10.67,
+      "halsteadEffort": 3611.01
+    },
+    {
+      "file": "app\\dashboard\\patients\\page.tsx",
+      "function": "handleReset",
+      "cyclomatic": 1,
+      "halsteadVolume": 36,
+      "halsteadDifficulty": 1.17,
+      "halsteadEffort": 42
+    },
+    {
+      "file": "app\\dashboard\\patients\\page.tsx",
+      "function": "<anon method-1>",
+      "cyclomatic": 1,
+      "halsteadVolume": 18.09,
+      "halsteadDifficulty": 1,
+      "halsteadEffort": 18.09
+    },
+    {
+      "file": "app\\dashboard\\patients\\page.tsx",
+      "function": "<anon method-2>",
+      "cyclomatic": 1,
+      "halsteadVolume": 500.37,
+      "halsteadDifficulty": 11.05,
+      "halsteadEffort": 5527.92
+    },
+    {
+      "file": "app\\dashboard\\patients\\page.tsx",
+      "function": "<anon method-3>",
+      "cyclomatic": 1,
+      "halsteadVolume": 31.7,
+      "halsteadDifficulty": 2,
+      "halsteadEffort": 63.4
+    },
+    {
+      "file": "app\\dashboard\\patients\\[patientId]\\page.tsx",
+      "function": "PatientDetailPage",
+      "cyclomatic": 7,
+      "halsteadVolume": 4543.51,
+      "halsteadDifficulty": 30.55,
+      "halsteadEffort": 138818.76
+    },
+    {
+      "file": "app\\dashboard\\patients\\[patientId]\\page.tsx",
+      "function": "<anon method-1>",
+      "cyclomatic": 2,
+      "halsteadVolume": 295,
+      "halsteadDifficulty": 10.26,
+      "halsteadEffort": 3027.63
+    },
+    {
+      "file": "app\\dashboard\\patients\\[patientId]\\page.tsx",
+      "function": "<anon method-2>",
+      "cyclomatic": 1,
+      "halsteadVolume": 2,
+      "halsteadDifficulty": 0.5,
+      "halsteadEffort": 1
+    },
+    {
+      "file": "app\\dashboard\\patients\\[patientId]\\page.tsx",
+      "function": "<anon method-3>",
+      "cyclomatic": 1,
+      "halsteadVolume": 11.61,
+      "halsteadDifficulty": 1,
+      "halsteadEffort": 11.61
+    },
+    {
+      "file": "app\\dashboard\\patients\\[patientId]\\edit\\page.tsx",
+      "function": "PatientEditPage",
+      "cyclomatic": 7,
+      "halsteadVolume": 1530.74,
+      "halsteadDifficulty": 14.56,
+      "halsteadEffort": 22294.52
+    },
+    {
+      "file": "app\\dashboard\\patients\\[patientId]\\edit\\page.tsx",
+      "function": "<anon method-1>",
+      "cyclomatic": 2,
+      "halsteadVolume": 295,
+      "halsteadDifficulty": 10.26,
+      "halsteadEffort": 3027.63
+    },
+    {
+      "file": "app\\dashboard\\patients\\[patientId]\\edit\\page.tsx",
+      "function": "<anon method-2>",
+      "cyclomatic": 1,
+      "halsteadVolume": 2,
+      "halsteadDifficulty": 0.5,
+      "halsteadEffort": 1
+    },
+    {
+      "file": "app\\dashboard\\patients\\[patientId]\\edit\\page.tsx",
+      "function": "handleUpdateSuccess",
+      "cyclomatic": 1,
+      "halsteadVolume": 31.7,
+      "halsteadDifficulty": 2,
+      "halsteadEffort": 63.4
+    },
+    {
+      "file": "app\\dashboard\\patients\\[patientId]\\edit\\page.tsx",
+      "function": "<anon method-3>",
+      "cyclomatic": 1,
+      "halsteadVolume": 31.7,
+      "halsteadDifficulty": 2,
+      "halsteadEffort": 63.4
+    },
+    {
+      "file": "app\\dashboard\\patients\\register\\page.tsx",
+      "function": "PatientRegistrationPage",
+      "cyclomatic": 1,
+      "halsteadVolume": 515.22,
+      "halsteadDifficulty": 8.83,
+      "halsteadEffort": 4547.41
+    },
+    {
+      "file": "app\\(auth)\\login\\page.tsx",
+      "function": "LoginPage",
+      "cyclomatic": 1,
+      "halsteadVolume": 1156.73,
+      "halsteadDifficulty": 8.56,
+      "halsteadEffort": 9906.06
+    },
+    {
+      "file": "components\\ui\\Select.tsx",
+      "function": "<anon method-1>",
+      "cyclomatic": 9,
+      "halsteadVolume": 1069.93,
+      "halsteadDifficulty": 19.4,
+      "halsteadEffort": 20756.7
+    },
+    {
+      "file": "components\\ui\\Select.tsx",
+      "function": "<anon method-2>",
+      "cyclomatic": 1,
+      "halsteadVolume": 62.27,
+      "halsteadDifficulty": 3.14,
+      "halsteadEffort": 195.71
+    },
+    {
+      "file": "components\\ui\\LogoutButton.tsx",
+      "function": "LogoutButton",
+      "cyclomatic": 1,
+      "halsteadVolume": 463.55,
+      "halsteadDifficulty": 6.99,
+      "halsteadEffort": 3238.6
+    },
+    {
+      "file": "components\\ui\\LogoutButton.tsx",
+      "function": "handleLogout",
+      "cyclomatic": 1,
+      "halsteadVolume": 51.81,
+      "halsteadDifficulty": 3,
+      "halsteadEffort": 155.42
+    },
+    {
+      "file": "components\\ui\\Input.tsx",
+      "function": "<anon method-1>",
+      "cyclomatic": 8,
+      "halsteadVolume": 847.73,
+      "halsteadDifficulty": 18.89,
+      "halsteadEffort": 16012.72
+    },
+    {
+      "file": "components\\ui\\DeletePatientButton.tsx",
+      "function": "DeletePatientButton",
+      "cyclomatic": 2,
+      "halsteadVolume": 404.09,
+      "halsteadDifficulty": 8.35,
+      "halsteadEffort": 3374.9
+    },
+    {
+      "file": "components\\ui\\DeletePatientButton.tsx",
+      "function": "handleDelete",
+      "cyclomatic": 3,
+      "halsteadVolume": 367.21,
+      "halsteadDifficulty": 9.9,
+      "halsteadEffort": 3635.41
+    },
+    {
+      "file": "components\\ui\\Button.tsx",
+      "function": "Button",
+      "cyclomatic": 4,
+      "halsteadVolume": 842.8,
+      "halsteadDifficulty": 12.66,
+      "halsteadEffort": 10666.64
+    },
+    {
+      "file": "components\\forms\\PatientUpdateForm.tsx",
+      "function": "toFormValues",
+      "cyclomatic": 1,
+      "halsteadVolume": 182.66,
+      "halsteadDifficulty": 6.71,
+      "halsteadEffort": 1225.35
+    },
+    {
+      "file": "components\\forms\\PatientUpdateForm.tsx",
+      "function": "validateForm",
+      "cyclomatic": 6,
+      "halsteadVolume": 298.68,
+      "halsteadDifficulty": 9.54,
+      "halsteadEffort": 2848.93
+    },
+    {
+      "file": "components\\forms\\PatientUpdateForm.tsx",
+      "function": "hasErrors",
+      "cyclomatic": 1,
+      "halsteadVolume": 31.7,
+      "halsteadDifficulty": 2,
+      "halsteadEffort": 63.4
+    },
+    {
+      "file": "components\\forms\\PatientUpdateForm.tsx",
+      "function": "buildChangedFields",
+      "cyclomatic": 7,
+      "halsteadVolume": 384,
+      "halsteadDifficulty": 19.44,
+      "halsteadEffort": 7466.67
+    },
+    {
+      "file": "components\\forms\\PatientUpdateForm.tsx",
+      "function": "PatientUpdateForm",
+      "cyclomatic": 2,
+      "halsteadVolume": 2111.52,
+      "halsteadDifficulty": 18.53,
+      "halsteadEffort": 39126.22
+    },
+    {
+      "file": "components\\forms\\PatientUpdateForm.tsx",
+      "function": "<anon method-1>",
+      "cyclomatic": 1,
+      "halsteadVolume": 4.75,
+      "halsteadDifficulty": 0.5,
+      "halsteadEffort": 2.38
+    },
+    {
+      "file": "components\\forms\\PatientUpdateForm.tsx",
+      "function": "handleChange",
+      "cyclomatic": 1,
+      "halsteadVolume": 66.61,
+      "halsteadDifficulty": 4.29,
+      "halsteadEffort": 285.46
+    },
+    {
+      "file": "components\\forms\\PatientUpdateForm.tsx",
+      "function": "<anon method-2>",
+      "cyclomatic": 1,
+      "halsteadVolume": 15.51,
+      "halsteadDifficulty": 1.5,
+      "halsteadEffort": 23.27
+    },
+    {
+      "file": "components\\forms\\PatientUpdateForm.tsx",
+      "function": "<anon method-3>",
+      "cyclomatic": 1,
+      "halsteadVolume": 15.51,
+      "halsteadDifficulty": 1.5,
+      "halsteadEffort": 23.27
+    },
+    {
+      "file": "components\\forms\\PatientUpdateForm.tsx",
+      "function": "handleSubmit",
+      "cyclomatic": 5,
+      "halsteadVolume": 688.28,
+      "halsteadDifficulty": 11.71,
+      "halsteadEffort": 8057.92
+    },
+    {
+      "file": "components\\forms\\PatientRegistrationForm.tsx",
+      "function": "validateForm",
+      "cyclomatic": 7,
+      "halsteadVolume": 352.84,
+      "halsteadDifficulty": 9.6,
+      "halsteadEffort": 3387.24
+    },
+    {
+      "file": "components\\forms\\PatientRegistrationForm.tsx",
+      "function": "hasErrors",
+      "cyclomatic": 1,
+      "halsteadVolume": 31.7,
+      "halsteadDifficulty": 2,
+      "halsteadEffort": 63.4
+    },
+    {
+      "file": "components\\forms\\PatientRegistrationForm.tsx",
+      "function": "PatientRegistrationForm",
+      "cyclomatic": 3,
+      "halsteadVolume": 2639.27,
+      "halsteadDifficulty": 17.51,
+      "halsteadEffort": 46218.26
+    },
+    {
+      "file": "components\\forms\\PatientRegistrationForm.tsx",
+      "function": "handleChange",
+      "cyclomatic": 1,
+      "halsteadVolume": 66.61,
+      "halsteadDifficulty": 4.29,
+      "halsteadEffort": 285.46
+    },
+    {
+      "file": "components\\forms\\PatientRegistrationForm.tsx",
+      "function": "<anon method-1>",
+      "cyclomatic": 1,
+      "halsteadVolume": 15.51,
+      "halsteadDifficulty": 1.5,
+      "halsteadEffort": 23.27
+    },
+    {
+      "file": "components\\forms\\PatientRegistrationForm.tsx",
+      "function": "<anon method-2>",
+      "cyclomatic": 1,
+      "halsteadVolume": 15.51,
+      "halsteadDifficulty": 1.5,
+      "halsteadEffort": 23.27
+    },
+    {
+      "file": "components\\forms\\PatientRegistrationForm.tsx",
+      "function": "handleSubmit",
+      "cyclomatic": 4,
+      "halsteadVolume": 538.79,
+      "halsteadDifficulty": 9.56,
+      "halsteadEffort": 5150.25
+    },
+    {
+      "file": "components\\forms\\LoginForm.tsx",
+      "function": "validateForm",
+      "cyclomatic": 3,
+      "halsteadVolume": 113.3,
+      "halsteadDifficulty": 7.43,
+      "halsteadEffort": 841.66
+    },
+    {
+      "file": "components\\forms\\LoginForm.tsx",
+      "function": "hasErrors",
+      "cyclomatic": 1,
+      "halsteadVolume": 31.7,
+      "halsteadDifficulty": 2,
+      "halsteadEffort": 63.4
+    },
+    {
+      "file": "components\\forms\\LoginForm.tsx",
+      "function": "LoginForm",
+      "cyclomatic": 2,
+      "halsteadVolume": 1160.52,
+      "halsteadDifficulty": 12,
+      "halsteadEffort": 13926.28
+    },
+    {
+      "file": "components\\forms\\LoginForm.tsx",
+      "function": "handleChange",
+      "cyclomatic": 1,
+      "halsteadVolume": 66.61,
+      "halsteadDifficulty": 4.29,
+      "halsteadEffort": 285.46
+    },
+    {
+      "file": "components\\forms\\LoginForm.tsx",
+      "function": "<anon method-1>",
+      "cyclomatic": 1,
+      "halsteadVolume": 15.51,
+      "halsteadDifficulty": 1.5,
+      "halsteadEffort": 23.27
+    },
+    {
+      "file": "components\\forms\\LoginForm.tsx",
+      "function": "<anon method-2>",
+      "cyclomatic": 1,
+      "halsteadVolume": 15.51,
+      "halsteadDifficulty": 1.5,
+      "halsteadEffort": 23.27
+    },
+    {
+      "file": "components\\forms\\LoginForm.tsx",
+      "function": "handleSubmit",
+      "cyclomatic": 3,
+      "halsteadVolume": 458.46,
+      "halsteadDifficulty": 8.27,
+      "halsteadEffort": 3792.68
+    },
+    {
+      "file": "lib\\password.ts",
+      "function": "hashPassword",
+      "cyclomatic": 1,
+      "halsteadVolume": 19.65,
+      "halsteadDifficulty": 1.5,
+      "halsteadEffort": 29.48
+    },
+    {
+      "file": "lib\\password.ts",
+      "function": "comparePassword",
+      "cyclomatic": 1,
+      "halsteadVolume": 19.65,
+      "halsteadDifficulty": 1.5,
+      "halsteadEffort": 29.48
+    },
+    {
+      "file": "lib\\mongodb.ts",
+      "function": "connectToDatabase",
+      "cyclomatic": 3,
+      "halsteadVolume": 148,
+      "halsteadDifficulty": 9.5,
+      "halsteadEffort": 1406
+    },
+    {
+      "file": "lib\\jwt.ts",
+      "function": "signToken",
+      "cyclomatic": 1,
+      "halsteadVolume": 98.1,
+      "halsteadDifficulty": 3.5,
+      "halsteadEffort": 343.35
+    },
+    {
+      "file": "lib\\jwt.ts",
+      "function": "verifyToken",
+      "cyclomatic": 1,
+      "halsteadVolume": 108,
+      "halsteadDifficulty": 6.5,
+      "halsteadEffort": 702
+    },
+    {
+      "file": "lib\\jwt.ts",
+      "function": "extractTokenFromCookie",
+      "cyclomatic": 3,
+      "halsteadVolume": 164.23,
+      "halsteadDifficulty": 8.5,
+      "halsteadEffort": 1395.98
+    },
+    {
+      "file": "lib\\jwt.ts",
+      "function": "<anon method-1>",
+      "cyclomatic": 1,
+      "halsteadVolume": 8,
+      "halsteadDifficulty": 1,
+      "halsteadEffort": 8
+    },
+    {
+      "file": "lib\\jwt.ts",
+      "function": "<anon method-2>",
+      "cyclomatic": 1,
+      "halsteadVolume": 24,
+      "halsteadDifficulty": 2,
+      "halsteadEffort": 48
+    },
+    {
+      "file": "services\\patientService.ts",
+      "function": "validateRegistrationInput",
+      "cyclomatic": 7,
+      "halsteadVolume": 333.73,
+      "halsteadDifficulty": 11.25,
+      "halsteadEffort": 3754.48
+    },
+    {
+      "file": "services\\patientService.ts",
+      "function": "hasValidationErrors",
+      "cyclomatic": 1,
+      "halsteadVolume": 31.7,
+      "halsteadDifficulty": 2,
+      "halsteadEffort": 63.4
+    },
+    {
+      "file": "services\\patientService.ts",
+      "function": "registerPatient",
+      "cyclomatic": 4,
+      "halsteadVolume": 1071.12,
+      "halsteadDifficulty": 22.9,
+      "halsteadEffort": 24531.65
+    },
+    {
+      "file": "services\\patientService.ts",
+      "function": "validateUpdateInput",
+      "cyclomatic": 14,
+      "halsteadVolume": 619.27,
+      "halsteadDifficulty": 18.63,
+      "halsteadEffort": 11538.06
+    },
+    {
+      "file": "services\\patientService.ts",
+      "function": "hasUpdateValidationErrors",
+      "cyclomatic": 1,
+      "halsteadVolume": 31.7,
+      "halsteadDifficulty": 2,
+      "halsteadEffort": 63.4
+    },
+    {
+      "file": "services\\patientService.ts",
+      "function": "updatePatient",
+      "cyclomatic": 11,
+      "halsteadVolume": 1266.12,
+      "halsteadDifficulty": 18.78,
+      "halsteadEffort": 23778.31
+    },
+    {
+      "file": "services\\patientService.ts",
+      "function": "deletePatient",
+      "cyclomatic": 3,
+      "halsteadVolume": 328.09,
+      "halsteadDifficulty": 11.34,
+      "halsteadEffort": 3721.74
+    },
+    {
+      "file": "services\\patientSearchService.ts",
+      "function": "buildSearchFilter",
+      "cyclomatic": 2,
+      "halsteadVolume": 155.59,
+      "halsteadDifficulty": 7.5,
+      "halsteadEffort": 1166.92
+    },
+    {
+      "file": "services\\patientSearchService.ts",
+      "function": "mapToSearchResult",
+      "cyclomatic": 1,
+      "halsteadVolume": 69.74,
+      "halsteadDifficulty": 4.8,
+      "halsteadEffort": 334.74
+    },
+    {
+      "file": "services\\patientSearchService.ts",
+      "function": "mapToDetailResponse",
+      "cyclomatic": 1,
+      "halsteadVolume": 203.16,
+      "halsteadDifficulty": 5.46,
+      "halsteadEffort": 1108.14
+    },
+    {
+      "file": "services\\patientSearchService.ts",
+      "function": "searchPatients",
+      "cyclomatic": 2,
+      "halsteadVolume": 176.42,
+      "halsteadDifficulty": 4.8,
+      "halsteadEffort": 846.81
+    },
+    {
+      "file": "services\\patientSearchService.ts",
+      "function": "getPatientById",
+      "cyclomatic": 3,
+      "halsteadVolume": 238.42,
+      "halsteadDifficulty": 7.2,
+      "halsteadEffort": 1716.61
+    },
+    {
+      "file": "services\\authService.ts",
+      "function": "login",
+      "cyclomatic": 5,
+      "halsteadVolume": 729.32,
+      "halsteadDifficulty": 12.78,
+      "halsteadEffort": 9319.13
+    },
+    {
+      "file": "services\\authService.ts",
+      "function": "getUserById",
+      "cyclomatic": 2,
+      "halsteadVolume": 212.61,
+      "halsteadDifficulty": 7.39,
+      "halsteadEffort": 1571.78
+    },
+    {
+      "file": "utils\\generatePatientId.ts",
+      "function": "generatePatientId",
+      "cyclomatic": 1,
+      "halsteadVolume": 22.46,
+      "halsteadDifficulty": 2,
+      "halsteadEffort": 44.92
+    },
+    {
+      "file": "utils\\apiResponse.ts",
+      "function": "successResponse",
+      "cyclomatic": 1,
+      "halsteadVolume": 57.36,
+      "halsteadDifficulty": 3.57,
+      "halsteadEffort": 204.85
+    },
+    {
+      "file": "utils\\apiResponse.ts",
+      "function": "errorResponse",
+      "cyclomatic": 1,
+      "halsteadVolume": 57.36,
+      "halsteadDifficulty": 3.57,
+      "halsteadEffort": 204.85
+    },
+    {
+      "file": "utils\\apiResponse.ts",
+      "function": "toApiFieldErrors",
+      "cyclomatic": 2,
+      "halsteadVolume": 122.62,
+      "halsteadDifficulty": 5.33,
+      "halsteadEffort": 653.99
+    },
+    {
+      "file": "utils\\apiResponse.ts",
+      "function": "<anon method-1>",
+      "cyclomatic": 1,
+      "halsteadVolume": 8,
+      "halsteadDifficulty": 1,
+      "halsteadEffort": 8
+    },
+    {
+      "file": "utils\\apiResponse.ts",
+      "function": "<anon method-2>",
+      "cyclomatic": 1,
+      "halsteadVolume": 10,
+      "halsteadDifficulty": 1,
+      "halsteadEffort": 10
+    },
+    {
+      "file": "types\\index.ts",
+      "function": "<anon method-1>",
+      "cyclomatic": 1,
+      "halsteadVolume": 47.73,
+      "halsteadDifficulty": 3.75,
+      "halsteadEffort": 178.97
+    },
+    {
+      "file": "middleware.ts",
+      "function": "isPublicRoute",
+      "cyclomatic": 1,
+      "halsteadVolume": 19.65,
+      "halsteadDifficulty": 2,
+      "halsteadEffort": 39.3
+    },
+    {
+      "file": "middleware.ts",
+      "function": "<anon method-1>",
+      "cyclomatic": 1,
+      "halsteadVolume": 11.61,
+      "halsteadDifficulty": 1,
+      "halsteadEffort": 11.61
+    },
+    {
+      "file": "middleware.ts",
+      "function": "isAuthOnlyRoute",
+      "cyclomatic": 1,
+      "halsteadVolume": 19.65,
+      "halsteadDifficulty": 2,
+      "halsteadEffort": 39.3
+    },
+    {
+      "file": "middleware.ts",
+      "function": "<anon method-2>",
+      "cyclomatic": 1,
+      "halsteadVolume": 11.61,
+      "halsteadDifficulty": 1,
+      "halsteadEffort": 11.61
+    },
+    {
+      "file": "middleware.ts",
+      "function": "isProtectedRoute",
+      "cyclomatic": 1,
+      "halsteadVolume": 19.65,
+      "halsteadDifficulty": 2,
+      "halsteadEffort": 39.3
+    },
+    {
+      "file": "middleware.ts",
+      "function": "<anon method-3>",
+      "cyclomatic": 1,
+      "halsteadVolume": 11.61,
+      "halsteadDifficulty": 1,
+      "halsteadEffort": 11.61
+    },
+    {
+      "file": "middleware.ts",
+      "function": "redirectTo",
+      "cyclomatic": 1,
+      "halsteadVolume": 53.77,
+      "halsteadDifficulty": 4,
+      "halsteadEffort": 215.1
+    },
+    {
+      "file": "middleware.ts",
+      "function": "middleware",
+      "cyclomatic": 8,
+      "halsteadVolume": 466.31,
+      "halsteadDifficulty": 9.4,
+      "halsteadEffort": 4383.35
+    }
+  ],
+  "summary": {
+    "totalFunctions": 107,
+    "sumCyclomatic": 245,
+    "averageCyclomatic": 2.289719626168224,
+    "highRiskCount": 2
+  }
+}

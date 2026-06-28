@@ -64,6 +64,8 @@
  *                   mirroring getPatientById()'s existing
  *                   not-found handling from Sprint 2)
  */
+export type PatientDeleteFailureReason = "NOT_FOUND" | "SERVER_ERROR";
+
 export type PatientDeleteResult =
   | { success: true;  patientId: string }
-  | { success: false; message: string };
+  | { success: false; reason: PatientDeleteFailureReason; message: string };

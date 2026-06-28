@@ -103,6 +103,13 @@ export type PatientUpdateErrors = Partial<Record<keyof PatientUpdateInput, strin
  *   success: true  → carries the updated patient record
  *   success: false → carries a message, and optionally per-field errors
  */
+export type PatientUpdateFailureReason = "VALIDATION" | "NOT_FOUND" | "SERVER_ERROR";
+
 export type PatientUpdateResult =
   | { success: true;  patient: PatientDetailResponse }
-  | { success: false; message: string; fieldErrors?: PatientUpdateErrors };
+  | {
+      success: false;
+      reason: PatientUpdateFailureReason;
+      message: string;
+      fieldErrors?: PatientUpdateErrors;
+    };
