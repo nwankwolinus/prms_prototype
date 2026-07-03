@@ -128,7 +128,7 @@ export default function PatientRegistrationForm() {
    *   +1  try/catch decision point
    */
   async function handleSubmit(
-    event: React.FormEvent<HTMLFormElement>
+    event: React.ChangeEvent<HTMLFormElement>
   ): Promise<void> {
     event.preventDefault();
     setFormError("");

@@ -1,63 +1,51 @@
 /**
  * components/ui/Select.tsx
  *
- * Reusable select/dropdown primitive for the PRMS application.
+ * REFACTORED (Sprint 4 Stage 5):
  *
- * RESPONSIBILITIES:
- *   - Render a labelled, accessible <select> element
- *   - Display validation error messages below the field
- *   - Display optional helper text for user guidance
- *   - Forward all native select props to the underlying element
+ * Pre-refactor CC: 9 (anonymous Select inner function, tool-reported).
+ * Root cause: the aria-describedby attribute used a nested ternary
+ * (two chained ternary operators), each contributing a decision
+ * point under McCabe's formal definition, along with the label/
+ * error/helperText JSX conditional render blocks.
  *
- * EXPLICITLY NOT RESPONSIBLE FOR:
- *   - Form state management       → parent form components
- *   - Validation logic            → services or form validators
+ * Fix: extracted getDescribedBy() — a named pure function
+ * computing the aria-describedby value from the three possible
+ * inputs, converting two inline ternary decision points into a
+ * single, named function with its own measurable CC profile.
  *
- * DESIGN NOTES:
- *   - This component is structurally identical to Input.tsx by
- *     deliberate design — same label/error/helperText conditional
- *     pattern, same id-derivation logic, same forwardRef usage.
- *     A developer who understands Input.tsx already understands
- *     this file. This consistency is itself a maintainability
- *     property worth citing in Chapter 4 under design rationale.
+ * This is the same pattern applied to Button.tsx's VARIANT_STYLES
+ * in Sprint 1 (extracting a value-lookup concern into a named
+ * construct rather than leaving it as an inline expression) —
+ * extended here from a Record lookup to a conditional-value
+ * derivation.
  *
- *   - Options are passed as a prop (not hardcoded) so this
- *     component remains generic and reusable beyond gender —
- *     any future constrained-choice field can use it.
+ * CYCLOMATIC COMPLEXITY (post-refactor):
+ *   getDescribedBy(): CC = 3
+ *     +1  function entry
+ *     +1  error check
+ *     +1  helperText check
  *
- * CYCLOMATIC COMPLEXITY:
- *   Select: CC = 4
- *     +1  component entry
- *     +1  label conditional
- *     +1  error conditional
- *     +1  helperText conditional (only when no error)
+ *   Select (forwardRef component): CC ≈ 4 (target; to be
+ *   tool-verified — the three JSX conditional render blocks
+ *   for label/error/helperText remain, each contributing one
+ *   decision point as before)
  */
 
 import React from "react";
 
-// ─── Types ────────────────────────────────────────────────────────────────────
-
-/** A single selectable option. */
 export interface SelectOption {
   value: string;
   label: string;
 }
 
-/** Props accepted by the Select component. */
 interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
-  /** Label text displayed above the select field. */
-  label?:      string;
-  /** Validation error message displayed below the field in red. */
-  error?:      string;
-  /** Supplementary hint text displayed below the field in grey. */
-  helperText?: string;
-  /** The list of selectable options. */
-  options:     SelectOption[];
-  /** Placeholder shown as a disabled first option. */
+  label?:       string;
+  error?:       string;
+  helperText?:  string;
+  options:      SelectOption[];
   placeholder?: string;
 }
-
-// ─── Styles ───────────────────────────────────────────────────────────────────
 
 const BASE_SELECT_STYLES = [
   "block w-full rounded-md",
@@ -72,28 +60,30 @@ const BASE_SELECT_STYLES = [
 const NORMAL_SELECT_STYLES = "border-gray-300 focus:border-blue-500 focus:ring-blue-500";
 const ERROR_SELECT_STYLES  = "border-red-500 focus:border-red-500 focus:ring-red-500";
 
-// ─── Component ────────────────────────────────────────────────────────────────
-
 /**
- * Select
+ * getDescribedBy
  *
- * Primary dropdown element for the PRMS application.
- * Uses React.forwardRef for parity with Input.tsx and to support
- * programmatic focus on validation failure.
+ * Derives the aria-describedby value from error/helperText state.
+ * Extracted from an inline nested ternary to a named function so
+ * its two decision points are measured independently of the
+ * component that uses it, rather than inflating the component's
+ * own CC.
  *
- * @example
- * <Select
- *   label="Gender"
- *   name="gender"
- *   placeholder="Select gender"
- *   options={[
- *     { value: "Male",   label: "Male" },
- *     { value: "Female", label: "Female" },
- *     { value: "Other",  label: "Other" },
- *   ]}
- *   error={errors.gender}
- * />
+ * CC = 3:
+ *   +1  function entry
+ *   +1  error check
+ *   +1  helperText check
  */
+function getDescribedBy(
+  id:         string,
+  error?:     string,
+  helperText?: string
+): string | undefined {
+  if (error)      return `${id}-error`;
+  if (helperText) return `${id}-helper`;
+  return undefined;
+}
+
 const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
   (
     {
@@ -109,16 +99,12 @@ const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
     },
     ref
   ) => {
-    // Identical id-derivation pattern to Input.tsx — keeps label
-    // htmlFor and select id in sync without caller management.
-    const selectId     = id ?? name;
-    const stateStyles  = error ? ERROR_SELECT_STYLES : NORMAL_SELECT_STYLES;
+    const selectId    = id ?? name;
+    const stateStyles = error ? ERROR_SELECT_STYLES : NORMAL_SELECT_STYLES;
 
     return (
       <div className="flex flex-col gap-1">
 
-        {/* ── Label ─────────────────────────────────────────────────────────
-            CC +1 */}
         {label && (
           <label
             htmlFor={selectId}
@@ -128,18 +114,13 @@ const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
           </label>
         )}
 
-        {/* ── Select Element ──────────────────────────────────────────────── */}
         <select
           ref={ref}
           id={selectId}
           name={name}
           className={`${BASE_SELECT_STYLES} ${stateStyles} ${className}`.trim()}
           aria-invalid={!!error}
-          aria-describedby={
-            error      ? `${selectId}-error`  :
-            helperText ? `${selectId}-helper` :
-            undefined
-          }
+          aria-describedby={getDescribedBy(selectId ?? "", error, helperText)}
           {...props}
         >
           {placeholder && (
@@ -154,8 +135,6 @@ const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
           ))}
         </select>
 
-        {/* ── Error Message ─────────────────────────────────────────────────
-            CC +1 */}
         {error && (
           <p
             id={`${selectId}-error`}
@@ -166,8 +145,6 @@ const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
           </p>
         )}
 
-        {/* ── Helper Text ───────────────────────────────────────────────────
-            CC +1 */}
         {helperText && !error && (
           <p
             id={`${selectId}-helper`}
@@ -183,5 +160,4 @@ const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
 );
 
 Select.displayName = "Select";
-
 export default Select;

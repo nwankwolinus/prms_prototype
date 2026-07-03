@@ -145,12 +145,12 @@ const QUICK_LINKS: QuickLink[] = [
     icon:        "M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z",
   },
   {
-    label:       "Admin Panel",
-    description: "Manage system users and configuration.",
-    href:        "/dashboard/admin",
+    label:       "Patient Report",
+    description: "Generate and view the full patient listing.",
+    href:        "/dashboard/reports/patients",
     roles:       [UserRole.ADMIN],
     color:       "hover:border-purple-400 hover:bg-purple-50",
-    icon:        "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z",
+    icon:        "M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
   },
 ];
 
@@ -331,12 +331,12 @@ export default async function DashboardPage() {
           </div>
           <div>
             <p className="text-sm font-semibold text-blue-900">
-              Sprint 1 Complete — Authentication Layer
+              Sprints 1–4 In Progress — PRMS Prototype
             </p>
             <p className="mt-1 text-xs text-blue-700">
-              JWT-based authentication, role-based route protection, and the
-              project foundation are in place. McCabe and Halstead metrics
-              will be extracted at the Sprint 1 code freeze checkpoint.
+              Authentication, patient registration, search, record management,
+              and reporting are implemented. Refactoring and complexity
+              evaluation are underway in Sprint 4.
             </p>
             <ul className="mt-3 space-y-1">
               {[

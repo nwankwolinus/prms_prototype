@@ -83,7 +83,7 @@ import {
 } from "@/types/patientSearch";
 import { PatientDetailResponse } from "@/types/patientDetail";
 import { PersistedPatient } from "@/types/patient";
-
+import { PatientReportItem, PatientReportResponse } from "@/types/patientReport";
 // ─── Result Types ─────────────────────────────────────────────────────────────
 
 /**
@@ -279,4 +279,72 @@ export async function getPatientById(
   }
 
   return { success: true, patient: mapToDetailResponse(document) };
+}
+
+// ─── Patient Report ─────────────────────────────────────────────────────────────
+
+/**
+ * mapToReportItem
+ *
+ * Maps a Mongoose patient document to the PatientReportItem DTO.
+ * A dedicated mapper, distinct from mapToSearchResult() and
+ * mapToDetailResponse() — see the design review above for why
+ * neither existing mapper was reused or extended.
+ *
+ * CC = 1 — pure mapping, no branching.
+ *
+ * @param doc - A persisted patient record.
+ * @returns The report-row shape.
+ */
+function mapToReportItem(doc: PersistedPatient): PatientReportItem {
+  return {
+    patientId:   doc.patientId,
+    firstName:   doc.firstName,
+    lastName:    doc.lastName,
+    gender:      doc.gender,
+    dateOfBirth: doc.dateOfBirth,
+    phoneNumber: doc.phoneNumber,
+    address: doc.address,
+    createdAt: doc.createdAt,
+  };
+}
+
+/**
+ * getPatientReport
+ *
+ * Retrieves every registered patient, sorted alphabetically by
+ * last name then first name, and maps each to the report DTO.
+ *
+ * CORRECTION (pre-finalisation review): an earlier draft included
+ * a try/catch here, but PatientReportResponse has no
+ * success/failure shape to express a caught error through —
+ * unlike getPatientById(), which has a genuine discriminated-union
+ * result type to report into. Rather than introduce a mismatched
+ * try/catch (catching an error with nothing meaningful to do with
+ * it) or add a discriminated-union result type Stage 1 deliberately
+ * did not define, this function now matches searchPatients()'s
+ * existing convention exactly: no try/catch at this layer, no
+ * business-level failure case (an empty patient collection is a
+ * valid, complete report, not an error), and any genuinely
+ * unexpected database failure propagates to the API layer (Stage
+ * 3), to be caught and handled there — consistent with this
+ * project's established convention that unexpected database
+ * failures may throw and be handled by the calling API route.
+ *
+ * CC = 1:
+ *   +1  function entry
+ *   (no branching — no try/catch, no conditional logic)
+ *
+ * @returns A Promise resolving to the complete patient report.
+ */
+export async function getPatientReport(): Promise<PatientReportResponse> {
+  await connectToDatabase();
+
+  const documents = await PatientModel.find({})
+    .sort({ lastName: 1, firstName: 1 })
+    .lean<PersistedPatient[]>();
+
+  const patients = documents.map(mapToReportItem);
+
+  return { patients };
 }
